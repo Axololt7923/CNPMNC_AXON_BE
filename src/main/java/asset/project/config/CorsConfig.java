@@ -1,13 +1,13 @@
 package asset.project.config;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
-
-import java.util.List;
 
 /**
  * CORS configuration for the REST API.
@@ -40,7 +40,8 @@ public class CorsConfig {
             "Content-Type",
             "Accept",
             "X-User-Id",        // custom header used by some endpoints
-            "X-Requested-With"
+            "X-Requested-With",
+            "X-Refresh-Token"
         ));
 
         // Headers browser is allowed to read from response
